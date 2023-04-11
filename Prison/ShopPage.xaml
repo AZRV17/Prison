@@ -1,0 +1,37 @@
+﻿<Page x:Class="Prison.ShopPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:Prison"
+      mc:Ignorable="d"
+      Title="ShopPage" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.12*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0.5*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid  Grid.Row="1" x:Name="GoodsDataGrid" Grid.ColumnSpan="3"></DataGrid>
+        <StackPanel Grid.Column="3" Grid.RowSpan="5" Background="Beige">
+            <Button x:Name="ToBill" Content=">" Margin="0 150 0 0" Click="ToBill_OnClick"></Button>
+            <Button x:Name="FromBill" Content="&lt;" Margin="0 30 0 0" Click="FromBill_OnClick"></Button>
+        </StackPanel>
+        <DataGrid Grid.Row="1" x:Name="BillDataGrid" Grid.Column="4" Grid.ColumnSpan="3"></DataGrid>
+        <Label Content="Внесено:"></Label>
+        <TextBox x:Name="MoneyTextBox" Grid.Column="1" Text="0"></TextBox>
+        <ComboBox Grid.Column="2" x:Name="PrisonerSelect"></ComboBox>
+        <Label Grid.Column="4" Content="Сумма" FontSize="20"></Label>
+        <TextBlock x:Name="TotalSum" Grid.Column="5" Text="0" FontSize="20" TextAlignment="Left"></TextBlock>
+        <Button x:Name="SaveBill" Grid.Row="2" Grid.Column="5" Content="Save" Click="SaveBill_OnClick"></Button>
+    </Grid>
+</Page>

@@ -1,0 +1,33 @@
+<Window x:Class="Prison.ShopWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prison"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="1000">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Frame Grid.RowSpan="3" Grid.ColumnSpan="6" x:Name="Frame" NavigationUIVisibility="Hidden"></Frame>
+        
+        <StackPanel Grid.Row="2" Grid.Column="5" Orientation="Horizontal">
+            <Button x:Name="PrevButton" Content="&lt;" Margin="0 0 10 0" Click="PrevButton_OnClick"></Button>
+            <Button x:Name="NextButton" Content=">" Margin="0 0 10 0" Click="NextButton_OnClick"></Button>
+        </StackPanel>
+    </Grid>
+</Window>
